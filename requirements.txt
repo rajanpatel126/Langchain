@@ -48,3 +48,6 @@ python-dotenv
 
 # Streamlit for Web Interface
 streamlit
+
+#data handling
+pydantic

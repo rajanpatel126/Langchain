@@ -1,9 +1,13 @@
 from langchain_openai import ChatOpenAI
+import os
 from dotenv import load_dotenv
 
 load_dotenv()
+# Set your OpenAI API key directly
+os.environ['OPENAI_API_KEY'] = os.environ.get('OPENAI_API_KEY')
 
-llm = ChatOpenAI(model='gpt-3.5-turbo-instruct', temperature=0.7)
+print("Openai API key: ",os.environ['OPENAI_API_KEY'])
+# llm = ChatOpenAI(model='gpt-4o-mini', temperature=0.7)
 
-result = llm.invoke("What is the capital of Australia?")
-print(result.content)
+# result = llm.invoke("What is the capital of Australia?")
+# print(result.content)
