@@ -15,7 +15,7 @@ from langchain_openai import ChatOpenAI
 #     'age': '30'
 # }
 
-model = ChatOpenAI()
+model = ChatOpenAI(model="gpt-4o")
 class Review(TypedDict):
     summary: Annotated[str, 'Summarize the review in one sentence.']
     sentiment: Annotated[str, 'Sentiment of the review.']  # e.g., Positive, Negative, Neutral
